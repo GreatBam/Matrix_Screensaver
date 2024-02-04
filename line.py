@@ -32,6 +32,9 @@ class Line:
     def getRandomChar(self):
         return random.choice(self.char)
     
+    def getRandomPosition(self):
+        return random.randint(0, len(self.oldPosition) - 1)
+    
     def draw(self):
         self.bext.fg(self.fg)
         self.bext.bg(self.bg)
@@ -50,7 +53,7 @@ class Line:
         self.oldPosition.pop(0)
         
     def changeOldPosition(self):
-        item = random.randint(0, len(self.oldPosition) - 1)
+        item = self.getRandomPosition()
         self.bext.goto(self.oldPosition[item][0], self.oldPosition[item][1])
         print(self.getRandomChar(), end='')
             
