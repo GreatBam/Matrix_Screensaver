@@ -1,5 +1,4 @@
 import random
-from time import sleep
 
 class Line:
     def __init__(self, fg, bg, width, height, bext):
