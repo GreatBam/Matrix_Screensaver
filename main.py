@@ -5,7 +5,7 @@ from interval_timer import IntervalTimer
 def main():
     width, height = bext.size()
     lines = []
-    for i in range(20):
+    for i in range(30):
         line = Line('green',
                     'black',
                     width,
