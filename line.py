@@ -43,7 +43,6 @@ class Line:
             self.x = self.getRandomX()
         else:
             self.y += 1
-        # sleep(0.1)
         
     def removeOldPosition(self):
         self.bext.goto(self.oldPosition[0][0], self.oldPosition[0][1])
