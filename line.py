@@ -24,5 +24,9 @@ class Line:
         self.bext.bg(self.bg)
         self.bext.goto(self.x, self.y)
         print(self.getRandomChar(), end='')
-        self.y += 1
+        if(self.y == self.height - 1):
+            self.y = 0
+            self.x = self.getRandomX()
+        else:
+            self.y += 1
         sleep(0.5)
