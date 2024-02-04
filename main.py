@@ -3,10 +3,14 @@ from line import Line
 
 def main():
     width, height = bext.size()
-    line = Line('green', 'black', width, height, bext, 5, 0)
+    lines = []
+    for i in range(0, 10):
+        line = Line('green', 'black', width, height, bext)
+        lines.append(line)
     try:
         while True:
-            line.printLine()
+            for line in lines:
+                line.printLine()
     except KeyboardInterrupt:
         pass
     

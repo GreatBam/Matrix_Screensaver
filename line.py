@@ -2,15 +2,15 @@ import random
 from time import sleep
 
 class Line:
-    def __init__(self, fg, bg, width, height, bext, pending, x, y=0):
+    def __init__(self, fg, bg, width, height, bext):
         self.fg = fg
         self.bg = bg
         self.width = width
         self.height = height
         self.bext = bext
-        self.pending = pending
-        self.x = x
-        self.y = y
+        self.pending = random.randint(0, self.width - 10)
+        self.x = self.getRandomX()
+        self.y = 0
         self.char = ['*', '/', '+', '-']
         self.oldPosition = []
 
@@ -31,7 +31,7 @@ class Line:
             self.x = self.getRandomX()
         else:
             self.y += 1
-        sleep(0.5)
+        sleep(0.1)
         
     def removeOldPosition(self):
         self.bext.goto(self.oldPosition[0][0], self.oldPosition[0][1])
