@@ -11,8 +11,20 @@ class Line:
         self.pending = random.randint(0, self.width - 10)
         self.x = self.getRandomX()
         self.y = 0
-        self.char = ['*', '/', '+', '-']
         self.oldPosition = []
+        self.char = [
+                        'ア', 'イ', 'ウ', 'エ', 'オ',
+                        'カ', 'キ', 'ク', 'ケ', 'コ',
+                        'サ', 'シ', 'ス', 'セ', 'ソ',
+                        'タ', 'チ', 'ツ', 'テ', 'ト',
+                        'ナ', 'ニ', 'ヌ', 'ネ', 'ノ',
+                        '1', '2', '3', '4', '5',
+                        '6', '7', '8', '9', '0',
+                        '!', '@', '#', '$', '%',
+                        '&', '*', '(', ')', '-',
+                        '+', '=', '[', ']', ';',
+                        ':', ',', '.', '/', '?', '>'
+                    ]
 
     def getRandomX(self):
         return random.randint(0, self.width - 1)
