@@ -36,14 +36,14 @@ class Line:
         self.bext.fg(self.fg)
         self.bext.bg(self.bg)
         self.bext.goto(self.x, self.y)
-        self.oldPosition.append((self.x, self.y))
         print(self.getRandomChar(), end='')
+        self.oldPosition.append((self.x, self.y))
         if(self.y == self.height - 1):
             self.y = 0
             self.x = self.getRandomX()
         else:
             self.y += 1
-        sleep(0.1)
+        # sleep(0.1)
         
     def removeOldPosition(self):
         self.bext.goto(self.oldPosition[0][0], self.oldPosition[0][1])
