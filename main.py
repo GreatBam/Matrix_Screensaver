@@ -1,9 +1,14 @@
 import bext, random
-
+from line import Line
 
 def main():
     width, height = bext.size()
-    print(f"Width: {width}, Height: {height}")
+    line = Line('green', 'black', width, height, bext, 0, 0)
+    try:
+        while True:
+            line.draw()
+    except KeyboardInterrupt:
+        pass
     
 if __name__ == "__main__":
     main()
