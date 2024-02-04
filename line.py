@@ -37,10 +37,16 @@ class Line:
         self.bext.goto(self.oldPosition[0][0], self.oldPosition[0][1])
         print(' ', end='')
         self.oldPosition.pop(0)
+        
+    def changeOldPosition(self):
+        item = random.randint(0, len(self.oldPosition) - 1)
+        self.bext.goto(self.oldPosition[item][0], self.oldPosition[item][1])
+        print(self.getRandomChar(), end='')
             
     def printLine(self):
         if(self.pending <= 0):
             self.removeOldPosition()
+            self.changeOldPosition()
             self.draw()
         else:
             self.pending -= 1
