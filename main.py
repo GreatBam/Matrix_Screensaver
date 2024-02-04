@@ -4,8 +4,8 @@ from interval_timer import IntervalTimer
 def main():
     width, height = bext.size()
     lines = []
-    for i in range(30):
-        line = Line('green',
+    for i in range(50):
+        line = Line('blue',
                     'black',
                     width,
                     height,
