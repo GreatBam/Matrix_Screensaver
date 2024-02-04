@@ -8,7 +8,7 @@ class Line:
         self.width = width
         self.height = height
         self.bext = bext
-        self.pending = random.randint(0, self.width - 10)
+        self.pending = random.randint(4, self.width - 10)
         self.x = self.getRandomX()
         self.y = 0
         self.oldPosition = []
